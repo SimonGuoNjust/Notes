@@ -1,18 +1,16 @@
-# 书生浦语实战营-第五课作业
+# 书生浦语实战营-第四课作业
 ## 基础作业
-使用 OpenCompass 评测 InternLM2-Chat-7B 模型在 C-Eval 数据集上的性能
-使用eval_internlm2_chat_7b.py
-![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240220110848.png)
-结果
-![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240220110925.png)
+使用LMDeploy部署InternLM-Chat-7B 模型。
+1. 离线转换模型到lmdeploy TurboMind格式
+	![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240219162234.png)
+2. 本地命令行调用TurboMind部署
+	![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240219162506.png)
+ 3.Gradio作为前端， TurboMind作为后端部署，二者直接连接
+	![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240219162925.png)
 
 ## 进阶作业
-使用 OpenCompass 评测 InternLM2-Chat-7B 模型使用 LMDeploy 0.2.0 部署后在 C-Eval 数据集上的性能
-使用 eval_internlm_chat_turbomind.py配置文件，更改配置文件中的models参数为internlm2-chat-7B
-![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240220160837.png)
-
-
-在opencompass环境里安装lmdeploy运行得到结果
-![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240220160808.png)
-
-
+### 比较量化效果
+1. 未量化时
+	![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240219171159.png)
+2. 使用模型量化和KV_Cache量化后
+	![image.png](https://obsidiansycn.oss-cn-nanjing.aliyuncs.com/images/20240219190528.png)
